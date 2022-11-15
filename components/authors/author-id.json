@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_authors_author_ids",
+  "info": {
+    "name": "authorId",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

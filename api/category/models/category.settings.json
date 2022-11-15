@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "categories",
   "info": {
-    "name": "Posts",
-    "description": ""
+    "name": "Category"
   },
   "options": {
     "increments": true,
@@ -12,15 +11,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
-    },
-    "body": {
-      "type": "string"
-    },
-    "author": {
-      "model": "authors",
-      "via": "post"
     }
   }
 }

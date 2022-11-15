@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "authors",
   "info": {
-    "name": "Authors"
+    "name": "Authors",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,6 +17,20 @@
     },
     "age": {
       "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "post": {
+      "via": "author",
+      "model": "posts"
+    },
+    "comment": {
+      "via": "author",
+      "model": "comments"
     }
   }
 }

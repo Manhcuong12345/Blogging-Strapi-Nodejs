@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/posts": {
+    "/comments": {
       "get": {
         "deprecated": false,
-        "description": "Find all the posts's records",
+        "description": "Find all the comments's records",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Posts"
+                    "$ref": "#/components/schemas/Comments"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Comments"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new posts record",
+        "description": "Create a new comments record",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Posts"
+                  "$ref": "#/components/schemas/Comments"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Comments"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPosts"
+                "$ref": "#/components/schemas/NewComments"
               }
             }
           }
         }
       }
     },
-    "/posts/count": {
+    "/comments/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the number of posts documents",
+        "description": "Retrieve the number of comments documents",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Comments"
         ],
         "parameters": []
       }
     },
-    "/posts/{id}": {
+    "/comments/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one posts record",
+        "description": "Find one comments record",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Posts"
+                  "$ref": "#/components/schemas/Comments"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Comments"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single posts record",
+        "description": "Update a single comments record",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve comments document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Posts"
+                  "$ref": "#/components/schemas/Comments"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Comments"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPosts"
+                "$ref": "#/components/schemas/NewComments"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single posts record",
+        "description": "Delete a single comments record",
         "responses": {
           "200": {
-            "description": "deletes a single posts based on the ID supplied",
+            "description": "deletes a single comments based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Comments"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Posts": {
+      "Comments": {
         "required": [
           "id"
         ],
@@ -522,10 +522,7 @@
           "id": {
             "type": "string"
           },
-          "title": {
-            "type": "string"
-          },
-          "body": {
+          "bodyText": {
             "type": "string"
           },
           "author": {
@@ -571,12 +568,9 @@
           }
         }
       },
-      "NewPosts": {
+      "NewComments": {
         "properties": {
-          "title": {
-            "type": "string"
-          },
-          "body": {
+          "bodyText": {
             "type": "string"
           },
           "author": {
@@ -598,7 +592,7 @@
   },
   "tags": [
     {
-      "name": "Posts"
+      "name": "Comments"
     }
   ]
 }
